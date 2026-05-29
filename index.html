@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <form action="/submit" method="POST">
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Nome completo" >
+        </div>
+
+        <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" placeholder="Crie uma senha segura!" >
+        </div>
+        <div class="form-group">
+            <label for="verificaSenha">Senha novamente:</label>
+            <input type="password" id="verificaSenha" name="verificaSenha" placeholder="Digite sua senha novamente!" >
+        </div>
+
+        <div class="form-group">
+            <label>Gênero:</label>
+            <label for="masculino">
+                <input type="radio" id="masculino" name="habilidades" value="masculino">Masculino
+            </label>
+            <label for="Feminino">
+                <input type="radio" id="Feminino" name="habilidades" value="Feminino">Feminino
+            </label>
+            <label for="outro">
+                <input type="radio" id="outro" name="habilidades" value="outro">Outro
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="dataNascimento">Data de Nascimento:</label>
+            <input id="dataNascimento" name="dataNascimento" type="date">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <div class="form-group">
+            <label>Habilidades:</label>
+            <label for="html">
+                <input type="checkbox" id="html" name="habilidades" value="HTML">HTML
+            </label>
+
+            <label for="css">
+                <input type="checkbox" id="css" name="habilidades" value="CSS">CSS
+            </label>
+
+            <label for="js">
+                <input type="checkbox" id="js" name="habilidades" value="JS">JavaScript
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="pais">País:</label>
+            <select id="pais" name="pais">
+                <option value="Brasil">Brasil</option>
+                <option value="Paraguai">Paraguai</option>
+                <option value="Argentina">Argentina</option>
+                <option value="USA">Estados Unidos da América</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Angola">Angola</option>
+                <option value="Outro">Outro</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="comentarios">Comentários:</label><br>
+            <textarea id="comentarios" name="comentarios"></textarea>
+        </div>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"></script>
+        <script>
+                new FroalaEditor("#comentarios");
+        </script>
+
+        <div class="form-group">
+            <button id="botao" type="submit">Enviar</button>
+        </div>
+    </form>
+</body>
+
+</html>
